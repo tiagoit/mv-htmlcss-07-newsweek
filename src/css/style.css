@@ -1,0 +1,15 @@
+.title1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.title2 {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
