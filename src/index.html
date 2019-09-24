@@ -1,45 +1,828 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora|Roboto+Condensed:700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <main class="container">
-      <div class="row row1">
-        <div class="col1 col-lg"></div>
-        <div class="col2"></div>
-        <div class="col3"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora%7CRoboto+Condensed:700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar sticky-top d-xs-none d-sm-none d-md-none d-lg-block d-xl-block regular-nav">
+      <div class="first-row">
+        <span class="float-left">Tue, Sep 24, 2019</span>
+        <span class="logo">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve">
+            <g>
+              <path class="st0"
+                d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+              </path>
+            </g>
+          </svg>
+        </span>
+        <span class="float-right">
+          <span>SIGN IN</span>
+          <span>SUBSCRIBE ></span>
+        </span>
       </div>
-      <section class="featured-stories"></section>
-      <section class="top-stories"></section>
-    </main>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <div class="second-row d-flex justify-content-around">
+        <span>U.S.</span>|
+        <span>World</span>|
+        <span>Business</span>|
+        <span>Tech & Science</span>|
+        <span>Culture</span>|
+        <span>Newsgeek</span>|
+        <span>Sports</span>|
+        <span>Health</span>|
+        <span>Opinion</span>|
+        <span>Vantage</span>
+      </div>
+    </nav>
+
+    <nav class="navbar sticky-top d-lg-none d-xl-none mobile-nav">
+      <span class="logo float-left">
+        <svg class="mobile-nav-svg" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60"
+          style="enable-background:new 0 0 395.6 60;" xml:space="preserve">
+          <g>
+            <path class="st0"
+              d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+            </path>
+          </g>
+        </svg>
+      </span>
+      <span class="float-right">
+        <span>SIGN IN</span>
+        <span class="sub">SUBSCRIBE ></span>
+        <i class="fas fa-bars"></i>
+      </span>
+    </nav>
+  </header>
+
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <div class="row">
+          <div class="col-5">
+            <section class="featured-stories">
+              <h2 class="sec-title">Featured Stories</h2>
+              <article>
+                <div class="wrap">
+                  <span class="image-caption">analysis</span>
+                  <img src="https://picsum.photos/id/631/280/185" alt="img" />
+                </div>
+                <h3>
+                  Russia Won't Tell NASA What Caused Mystery Leak on ISS
+                </h3>
+                <div class="summary">
+                  The peace talks are collapsing and the violence still claims
+                  U.S. service members' lives, but it's been over a year since
+                  the Pentagon held a press briefing on America's longest war.
+                </div>
+              </article>
+              <article>
+                <div class="wrap">
+                  <span class="image-caption">news</span>
+                  <img src="https://picsum.photos/id/635/280/185" alt="img" />
+                </div>
+                <h3>
+                  Russia Won't Tell NASA What Caused Mystery Leak on ISS
+                </h3>
+                <div class="summary">
+                  The peace talks are collapsing and the violence still claims
+                  U.S. service members' lives, but it's been over a year since
+                  the Pentagon held a press briefing on America's longest war.
+                </div>
+              </article>
+              <article>
+                <div class="wrap">
+                  <span class="image-caption">U.S.</span>
+                  <img src="https://picsum.photos/id/633/280/185" alt="img" />
+                </div>
+                <h3>
+                  Russia Won't Tell NASA What Caused Mystery Leak on ISS
+                </h3>
+                <div class="summary">
+                  The peace talks are collapsing and the violence still claims
+                  U.S. service members' lives, but it's been over a year since
+                  the Pentagon held a press briefing on America's longest war.
+                </div>
+              </article>
+              <article>
+                <div class="wrap">
+                  <span class="image-caption">survey</span>
+                  <img src="https://picsum.photos/id/637/280/185" alt="img" />
+                </div>
+                <h3>
+                  Russia Won't Tell NASA What Caused Mystery Leak on ISS
+                </h3>
+                <div class="summary">
+                  The peace talks are collapsing and the violence still claims
+                  U.S. service members' lives, but it's been over a year since
+                  the Pentagon held a press briefing on America's longest war.
+                </div>
+              </article>
+            </section>
+          </div>
+          <div class="col-7">
+            <section class="top-stories">
+              <h2 class="sec-title">Top Story</h2>
+              <article>
+                <div class="wrap">
+                  <span class="image-caption">politics</span>
+                  <img src="https://picsum.photos/id/638/415/255" alt="img" />
+                </div>
+                <h3>
+                  Russia Won't Tell NASA What Caused Mystery Leak on ISS
+                </h3>
+                <div class="summary">
+                  The peace talks are collapsing and the violence still claims
+                  U.S. service members' lives.
+                </div>
+              </article>
+            </section>
+
+            <section class="culture-travel">
+              <h2 class="sec-title">Culture & Travel</h2>
+              <div class="row">
+                <div class="col">
+                  <article>
+                    <div class="wrap">
+                      <img src="https://picsum.photos/id/500/415/255" alt="img" />
+                    </div>
+                    <h4>
+                      Russia Won't Tell NASA What Caused Mystery Leak on ISS
+                    </h4>
+                    <div class="summary">
+                      The peace talks are collapsing and the violence still
+                      claims U.S. service members' lives.
+                    </div>
+                  </article>
+                  <article>
+                    <div class="wrap">
+                      <img src="https://picsum.photos/id/501/415/255" alt="img" />
+                    </div>
+                    <h4>
+                      Russia Won't Tell NASA What Caused Mystery Leak on ISS
+                    </h4>
+                    <div class="summary">
+                      The peace talks are collapsing and the violence still
+                      claims U.S. service members' lives. The peace talks are
+                      collapsing and the violence still claims U.S. service
+                      members' lives.
+                    </div>
+                  </article>
+                </div>
+                <div class="col">
+                  <article>
+                    <div class="wrap">
+                      <img src="https://picsum.photos/id/502/415/255" alt="img" />
+                    </div>
+                    <h4>
+                      Russia Won't Tell NASA What Caused Mystery Leak on ISS
+                    </h4>
+                    <div class="summary">
+                      The peace talks are collapsing and the violence still
+                      claims U.S. service members' lives.
+                    </div>
+                  </article>
+                  <article>
+                    <div class="wrap">
+                      <img src="https://picsum.photos/id/503/415/255" alt="img" />
+                    </div>
+                    <h4>
+                      Russia Won't Tell NASA What Caused Mystery Leak on ISS
+                    </h4>
+                    <div class="summary">
+                      The peace talks are collapsing and the violence still
+                      claims U.S. service members' lives.
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="more-stories">
+              <h2 class="sec-title">More Stories</h2>
+              <article>
+                <img src="https://picsum.photos/id/505/415/255" alt="img" />
+                <h5>
+                  Trump Administration Ignored Threats to U.S. Journalists in
+                  Egypt: Report
+                </h5>
+                <div class="summary">
+                  The New York Times said it was forced to turn to Ireland to
+                  help one of its reporters escape imminent arrest in Egypt,
+                  because the Trump administration failed to act.
+                </div>
+              </article>
+              <article>
+                <img src="https://picsum.photos/id/506/415/255" alt="img" />
+                <h5>
+                  Trump Administration Ignored Threats to U.S. Journalists in
+                  Egypt: Report
+                </h5>
+                <div class="summary">
+                  The New York Times said it was forced to turn to Ireland to
+                  help one of its reporters escape imminent arrest in Egypt,
+                  because the Trump administration failed to act.
+                </div>
+              </article>
+              <article>
+                <img src="https://picsum.photos/id/507/415/255" alt="img" />
+                <h5>
+                  Trump Administration Ignored Threats to U.S. Journalists in
+                  Egypt: Report
+                </h5>
+                <div class="summary">
+                  The New York Times said it was forced to turn to Ireland to
+                  help one of its reporters escape imminent arrest in Egypt,
+                  because the Trump administration failed to act.
+                </div>
+              </article>
+              <article>
+                <img src="https://picsum.photos/id/508/415/255" alt="img" />
+                <h5>
+                  Trump Administration Ignored Threats to U.S. Journalists in
+                  Egypt: Report
+                </h5>
+                <div class="summary">
+                  The New York Times said it was forced to turn to Ireland to
+                  help one of its reporters escape imminent arrest in Egypt,
+                  because the Trump administration failed to act.
+                </div>
+              </article>
+              <article>
+                <img src="https://picsum.photos/id/509/415/255" alt="img" />
+                <h5>
+                  Trump Administration Ignored Threats to U.S. Journalists in
+                  Egypt: Report
+                </h5>
+                <div class="summary">
+                  The New York Times said it was forced to turn to Ireland to
+                  help one of its reporters escape imminent arrest in Egypt,
+                  because the Trump administration failed to act.
+                </div>
+              </article>
+              <article>
+                <img src="https://picsum.photos/id/510/415/255" alt="img" />
+                <h5>
+                  Trump Administration Ignored Threats to U.S. Journalists in
+                  Egypt: Report
+                </h5>
+                <div class="summary">
+                  The New York Times said it was forced to turn to Ireland to
+                  help one of its reporters escape imminent arrest in Egypt,
+                  because the Trump administration failed to act.
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="row">
+          <div class="col">
+            <section class="opinion">
+              <h2 class="sec-title">Opinion</h2>
+              <div class="row no-gutters">
+                <div class="col-3">
+                  <img src="https://picsum.photos/id/511/120" alt="" />
+                </div>
+                <div class="col-9">
+                  <h5>
+                    GM Is Betraying the American Worker. And Trump Is Hanging
+                    Them Out to Dry
+                  </h5>
+                  <div class="author">BY ROBERT REIGHT</div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-3">
+                  <img src="https://picsum.photos/id/512/120" alt="" />
+                </div>
+                <div class="col-9">
+                  <h5>
+                    GM Is Betraying the American Worker. And Trump Is Hanging
+                    Them Out to Dry
+                  </h5>
+                  <div class="author">BY ROBERT REIGHT</div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-3">
+                  <img src="https://picsum.photos/id/513/120" alt="" />
+                </div>
+                <div class="col-9">
+                  <h5>
+                    GM Is Betraying the American Worker. And Trump Is Hanging
+                    Them Out to Dry
+                  </h5>
+                  <div class="author">BY ROBERT REIGHT</div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-3">
+                  <img src="https://picsum.photos/id/514/120" alt="" />
+                </div>
+                <div class="col-9">
+                  <h5>
+                    GM Is Betraying the American Worker. And Trump Is Hanging
+                    Them Out to Dry
+                  </h5>
+                  <div class="author">BY ROBERT REIGHT</div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-3">
+                  <img src="https://picsum.photos/id/515/120" alt="" />
+                </div>
+                <div class="col-9">
+                  <h5>
+                    GM Is Betraying the American Worker. And Trump Is Hanging
+                    Them Out to Dry
+                  </h5>
+                  <div class="author">BY ROBERT REIGHT</div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-3">
+                  <img src="https://picsum.photos/id/516/120" alt="" />
+                </div>
+                <div class="col-9">
+                  <h5>
+                    GM Is Betraying the American Worker. And Trump Is Hanging
+                    Them Out to Dry
+                  </h5>
+                  <div class="author">BY ROBERT REIGHT</div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-3">
+                  <img src="https://picsum.photos/id/517/120" alt="" />
+                </div>
+                <div class="col-9">
+                  <h5>
+                    GM Is Betraying the American Worker. And Trump Is Hanging
+                    Them Out to Dry
+                  </h5>
+                  <div class="author">BY ROBERT REIGHT</div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-3">
+                  <img src="https://picsum.photos/id/518/120" alt="" />
+                </div>
+                <div class="col-9">
+                  <h5>
+                    GM Is Betraying the American Worker. And Trump Is Hanging
+                    Them Out to Dry
+                  </h5>
+                  <div class="author">BY ROBERT REIGHT</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="latest-news">
+              <h2 class="sec-title">latest news</h2>
+              <div class="row no-gutters">
+                <div class="col-5">
+                  <img src="https://picsum.photos/id/519/135/90" alt="" />
+                </div>
+                <div class="col-7">
+                  <h5>
+                    Hackers Spreading Malware by Claiming to Offer Copies of
+                    Snowden's New Book
+                  </h5>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-5">
+                  <img src="https://picsum.photos/id/520/135/90" alt="" />
+                </div>
+                <div class="col-7">
+                  <h5>
+                    Hackers Spreading Malware by Claiming to Offer Copies of
+                    Snowden's New Book
+                  </h5>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-5">
+                  <img src="https://picsum.photos/id/521/135/90" alt="" />
+                </div>
+                <div class="col-7">
+                  <h5>
+                    Hackers Spreading Malware by Claiming to Offer Copies of
+                    Snowden's New Book
+                  </h5>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-5">
+                  <img src="https://picsum.photos/id/522/135/90" alt="" />
+                </div>
+                <div class="col-7">
+                  <h5>
+                    Hackers Spreading Malware by Claiming to Offer Copies of
+                    Snowden's New Book
+                  </h5>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-5">
+                  <img src="https://picsum.photos/id/523/135/90" alt="" />
+                </div>
+                <div class="col-7">
+                  <h5>
+                    Hackers Spreading Malware by Claiming to Offer Copies of
+                    Snowden's New Book
+                  </h5>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-5">
+                  <img src="https://picsum.photos/id/524/135/90" alt="" />
+                </div>
+                <div class="col-7">
+                  <h5>
+                    Hackers Spreading Malware by Claiming to Offer Copies of
+                    Snowden's New Book
+                  </h5>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <section class="in-the-magazine">
+          <h2 class="sec-title bottom-title text-center">
+            <i class="icon-n"></i> in the magazine
+          </h2>
+          <div class="row">
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <img src="https://picsum.photos/id/525/670/450" alt="img" />
+              <h5>
+                <span class="red">DOWNLOADS</span><span>TECH & SCIENCE</span>
+              </h5>
+              <div class="summary">
+                What Animals Can Teach Us About Teenagers' Risky Behavior
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <img src="https://picsum.photos/id/526/670/450" alt="img" />
+              <h5>
+                <span class="red">DOWNLOADS</span><span>TECH & SCIENCE</span>
+              </h5>
+              <div class="summary">
+                What Animals Can Teach Us About Teenagers' Risky Behavior
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <img src="https://picsum.photos/id/527/670/450" alt="img" />
+              <h5>
+                <span class="red">DOWNLOADS</span><span>TECH & SCIENCE</span>
+              </h5>
+              <div class="summary">
+                What Animals Can Teach Us About Teenagers' Risky Behavior
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <img src="https://picsum.photos/id/528/670/450" alt="img" />
+              <h5>
+                <span class="red">DOWNLOADS</span><span>TECH & SCIENCE</span>
+              </h5>
+              <div class="summary">
+                What Animals Can Teach Us About Teenagers' Risky Behavior
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <img src="https://picsum.photos/id/529/670/450" alt="img" />
+              <h5>
+                <span class="red">DOWNLOADS</span><span>TECH & SCIENCE</span>
+              </h5>
+              <div class="summary">
+                What Animals Can Teach Us About Teenagers' Risky Behavior
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <img src="https://picsum.photos/id/530/670/450" alt="img" />
+              <h5>
+                <span class="red">DOWNLOADS</span><span>TECH & SCIENCE</span>
+              </h5>
+              <div class="summary">
+                What Animals Can Teach Us About Teenagers' Risky Behavior
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <img src="https://picsum.photos/id/531/670/450" alt="img" />
+              <h5>
+                <span class="red">DOWNLOADS</span><span>TECH & SCIENCE</span>
+              </h5>
+              <div class="summary">
+                What Animals Can Teach Us About Teenagers' Risky Behavior
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <img src="https://picsum.photos/id/532/670/450" alt="img" />
+              <h5>
+                <span class="red">DOWNLOADS</span><span>TECH & SCIENCE</span>
+              </h5>
+              <div class="summary">
+                What Animals Can Teach Us About Teenagers' Risky Behavior
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <section class="editors-pick">
+          <h2 class="sec-title bottom-title text-center">
+            <i class="icon-n"></i> editor's picks
+          </h2>
+          <div class="row">
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <div class="wrap">
+                <span class="image-caption">U.S.</span>
+                <img src="https://picsum.photos/id/680/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+              <div class="summary">
+                The peace talks are collapsing and the violence still claims
+                U.S. service members' lives, but it's been over a year since.
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <div class="wrap">
+                <span class="image-caption">U.S.</span>
+                <img src="https://picsum.photos/id/681/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+              <div class="summary">
+                The peace talks are collapsing and the violence still claims
+                U.S. service members' lives, but it's been over a year since.
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <div class="wrap">
+                <span class="image-caption">U.S.</span>
+                <img src="https://picsum.photos/id/682/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+              <div class="summary">
+                The peace talks are collapsing and the violence still claims
+                U.S. service members' lives, but it's been over a year since.
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <div class="wrap">
+                <span class="image-caption">U.S.</span>
+                <img src="https://picsum.photos/id/683/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+              <div class="summary">
+                The peace talks are collapsing and the violence still claims
+                U.S. service members' lives, but it's been over a year since.
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <div class="wrap">
+                <span class="image-caption">U.S.</span>
+                <img src="https://picsum.photos/id/684/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+              <div class="summary">
+                The peace talks are collapsing and the violence still claims
+                U.S. service members' lives, but it's been over a year since.
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <div class="wrap">
+                <span class="image-caption">U.S.</span>
+                <img src="https://picsum.photos/id/685/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+              <div class="summary">
+                The peace talks are collapsing and the violence still claims
+                U.S. service members' lives, but it's been over a year since.
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <div class="wrap">
+                <span class="image-caption">U.S.</span>
+                <img src="https://picsum.photos/id/686/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+              <div class="summary">
+                The peace talks are collapsing and the violence still claims
+                U.S. service members' lives, but it's been over a year since.
+              </div>
+            </article>
+            <article class="col-lg-3 col-md-6 col-sm-12">
+              <div class="wrap">
+                <span class="image-caption">U.S.</span>
+                <img src="https://picsum.photos/id/687/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+              <div class="summary">
+                The peace talks are collapsing and the violence still claims
+                U.S. service members' lives, but it's been over a year since.
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <section class="featured-slideshows">
+          <h2 class="sec-title bottom-title text-center">
+            <i class="icon-n"></i> featured slideshows
+          </h2>
+          <div class="row">
+            <article class="col-lg-4 col-md-4 col-sm-12 mb-4">
+              <div class="wrap">
+                <span class="image-caption"><span class="inner-caption">4</span></span>
+                <img src="https://picsum.photos/id/690/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+            </article>
+            <article class="col-lg-4 col-md-4 col-sm-12 mb-4">
+              <div class="wrap">
+                <span class="image-caption"><span class="inner-caption">6</span></span>
+                <img src="https://picsum.photos/id/691/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+            </article>
+            <article class="col-lg-4 col-md-4 col-sm-12 mb-4">
+              <div class="wrap">
+                <span class="image-caption"><span class="inner-caption">8</span></span>
+                <img src="https://picsum.photos/id/692/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+            </article>
+            <article class="col-lg-4 col-md-4 col-sm-12 mb-4">
+              <div class="wrap">
+                <span class="image-caption"><span class="inner-caption">4</span></span>
+                <img src="https://picsum.photos/id/693/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+            </article>
+            <article class="col-lg-4 col-md-4 col-sm-12 mb-4">
+              <div class="wrap">
+                <span class="image-caption"><span class="inner-caption">6</span></span>
+                <img src="https://picsum.photos/id/694/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+            </article>
+            <article class="col-lg-4 col-md-4 col-sm-12 mb-4">
+              <div class="wrap">
+                <span class="image-caption"><span class="inner-caption">8</span></span>
+                <img src="https://picsum.photos/id/695/670/450" alt="img" />
+              </div>
+              <h3>
+                Russia Won't Tell NASA What Caused Mystery Leak on ISS
+              </h3>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <section class="subscribe">
+          <h2 class="sec-title color-1">Subscribe</h2>
+          <div class="row">
+            <div class="col">
+              <img src="https://picsum.photos/id/696/670/450" alt="">
+            </div>
+            <div class="col">
+              <h3>Lorem ipsum dolor, sit amet consectetur adipisicing</h3>
+              <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi alias, ad eius iusto
+              </div>
+              <button class="btn btn-danger">Subscribe ></button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <section class="newsletter">
+          <h2 class="sec-title color-1">Newsletter</h2>
+          <div class="row">
+            <div class="col">
+              <img src="https://picsum.photos/id/200/200/300" alt="">
+            </div>
+            <div class="col">
+              <h3>Lorem ipsum dolor</h3>
+              <div class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+              <button class="btn btn-danger">Sign up ></button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row first-row no-gutters">
+        <div class="col-lg-8 col-md-12 col-sm-12">
+          <svg class="footer-svg" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60"
+            style="enable-background:new 0 0 395.6 60;" xml:space="preserve">
+            <g>
+              <path class="st0"
+                d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+              </path>
+            </g>
+          </svg>
+          <span class="copyright">© 2019 NEWSWEEK</span>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 social">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="row second-row no-gutters mt-2">
+        <div class="col-lg-7 col-md-12 col-sm-12 links">
+          <span>About Us</span>
+          <span>Corrections</span>
+          <span>Contact Us</span>
+          <span>Editorial Guidelines</span>
+          <span>Advertise</span>
+          <span>Copyright</span>
+          <span>Terms & Conditions</span>
+          <span>Privacy Policy</span>
+          <span>Cookie Policy</span>
+          <span>Terms of Sale</span>
+          <span>Archive</span>
+          <span>Announcements</span>
+          <span>Consent preferences</span>
+        </div>
+        <div class="col-lg-4 offset-lg-1 col-md-12 col-sm-12 links">
+          <span><b>Editions:</b></span>
+          <span>U.S. Edition</span>
+          <span>日本</span>
+          <span>한국</span>
+          <span>Pakistan</span>
+          <span>Polska</span>
+          <span>România</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

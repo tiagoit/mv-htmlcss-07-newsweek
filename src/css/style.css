@@ -1,15 +1,325 @@
-.title1 {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 17px;
-  font-weight: 700;
+/* FontAwesome */
+i.fab {
+  font-family: "FontAwesome", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  height: 20px;
 }
 
-.title2 {
-  font-family: "Lora", serif;
-  font-size: 20px;
-  font-weight: 400;
+/* @override: Bootstrap */
+.btn-danger {
+  background-color: #f72210;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0;
+  margin-top: 12px;
+}
+
+img {
+  max-width: 100%;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-fluid {
+  padding: 20px 32px 20px;
+}
+
+.icon-n {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  width: 29px;
+  height: 28px;
+  margin-right: 8px;
+  background:
+    url(https://g.newsweek.com/www/images/logo-n1.svg)
+    center/contain
+    no-repeat
+    #f72210;
+}
+
+.color-1 {
+  color: #f72210 !important;
+}
+
+.icon-n::after {
+  border-bottom: 3px solid red;
+  border-right: 3px solid red;
+  display: block;
+  content: "";
+  width: 26px;
+  height: 25px;
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+}
+
+h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+h4 {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+h5 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+section {
+  margin-bottom: 12px;
+}
+
+.sec-title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: rgba(3, 3, 3, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.wrap {
+  position: relative;
+  margin-top: 8px;
+}
+
+.summary {
+  font-size: 15px;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  color: #f72210;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Tablet and desktop Navbar */
+header nav.regular-nav {
+  padding: 0 !important;
+}
+
+header .regular-nav .first-row {
+  width: 100%;
+  background-color: #f72210;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+header .regular-nav .first-row .logo svg {
+  height: 60px;
+  fill: #fff;
+}
+
+header .regular-nav .float-right,
+header .regular-nav .float-left {
+  margin-top: 42px;
+}
+
+header .float-right span {
+  color: #fff;
+  font-size: 18px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  padding: 0 12px;
+}
+
+header .float-right span:last-child {
+  background-color: #fff;
+  color: #e9212e;
+}
+
+header .regular-nav .second-row {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+header .regular-nav .second-row span {
+  display: inline-block;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile nav */
+header nav.mobile-nav {
+  background-color: #f72210;
+}
+
+header nav.mobile-nav svg.mobile-nav-svg {
+  height: 20px;
+  fill: #fff;
+}
+
+header nav.mobile-nav span.sub {
+  background-color: #f4f5f6;
+  color: #f72210;
+  margin-right: 12px;
+}
+
+header nav.mobile-nav i {
+  font-family: FontAwesome, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 28px;
+}
+
+/* Culture & Travel */
+section.culture-travel {
+  background-color: #f4f5f7;
+}
+
+/* More Stories */
+section.more-stories article img {
+  float: left;
+  max-width: 120px;
+  margin-right: 12px;
+}
+
+section.more-stories article {
+  padding: 8px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+section.more-stories article h5 {
+  margin-top: 0;
+}
+
+/* Opinion */
+section.opinion .row,
+section.latest-news .row {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px 0;
+}
+
+section.opinion .row div img {
+  border-radius: 50%;
+  padding-right: 8px;
+}
+
+section.opinion div.author {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif;
+  opacity: 0.7;
+}
+
+/* Latest News */
+section.latest-news .row {
+  padding: 8px 0;
+}
+
+section.latest-news .row h5 {
+  padding-left: 8px;
+  font-size: 16px;
+}
+
+/* Bottom titles */
+.bottom-title {
+  color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 12px;
+  margin-top: 16px;
+}
+
+/* In The Magazine */
+section.in-the-magazine .row article h5 {
+  color: #f72210;
+  margin-top: 8px;
+}
+
+section.in-the-magazine article h5 .red {
+  background-color: #f72210;
+  color: #fff;
+  padding: 0 4px;
+  margin-right: 8px;
+}
+
+section.in-the-magazine article .summary {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+/* featured slideshows */
+section.featured-slideshows .inner-caption {
+  font-size: 20px;
+  height: 12px;
+  width: 12px;
+  border: 1px solid #e9212e;
+  padding: 0 16px 2px;
+}
+
+/* Subscribe */
+section.subscribe .row {
+  background-color: #f4f5f6;
+  padding: 32px;
+}
+
+/* Footer */
+footer {
+  margin-top: 36px;
+}
+
+footer div.first-row {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+
+footer div.first-row div svg.footer-svg {
+  fill: #f72210;
+  height: 36px;
+}
+
+footer .first-row .social i {
+  margin: 0 8px;
+  float: right;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  position: relative;
+  bottom: -12px;
+  left: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+footer div.second-row .links span {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0 8px;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+footer .second-row .links span:first-child,
+footer .second-row .links span:last-child {
+  /* padding-left: 8px; */
+  border-right: none;
 }
