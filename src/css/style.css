@@ -281,7 +281,7 @@ section.subscribe .row {
 }
 
 /* Newsletter */
-section.newsletter img {
+section.newsletter .row div img {
   max-height: 200px;
 }
 
