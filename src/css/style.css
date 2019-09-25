@@ -17,7 +17,7 @@ i.fab {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -278,6 +278,11 @@ section.featured-slideshows .inner-caption {
 section.subscribe .row {
   background-color: #f4f5f6;
   padding: 32px;
+}
+
+/* Newsletter */
+section.newsletter img {
+  max-height: 200px;
 }
 
 /* Footer */
