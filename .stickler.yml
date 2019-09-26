@@ -1,0 +1,6 @@
+linters:
+  stylelint:
+    config: "stylelint.config.js"
+files:
+  ignore:
+    - "src/css/reset.css"
