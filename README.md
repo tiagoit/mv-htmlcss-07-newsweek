@@ -1,16 +1,30 @@
-# Copy of NewsWeek.com (With Bootstrap)
+# 📃 Microverse Assignment: Copy of NewsWeek.com (With Bootstrap)
+This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!').
+
+**Assignment page** - [The Odin Project](https://www.theodinproject.com/courses/html5-and-css3/lessons/using-bootstrap)
 
 Copy of NewsWeek.com website using Bootstrap.
 
-### Technology
+## 📡 Technologies used
+- HTML
+- CSS
+- Bootstrap
 
-HTML, CSS, Bootstrap
+## 🚀 The project
+This project can be found in https://github.com/tiagoit/mv-htmlcss-07-newsweek
 
-### Authors
+## ✨ [live version](https://tiagoit.github.io/mv-htmlcss-07-newsweek/src/)
 
-- **Tiago Ferreira** - [@ferreirati](https://github.com/ferreirati)
+## 💻 Serve it on localhost
+  - Clone the repository
+  - Run your favorite Webserver pointing to `/src` folder
 
-### Links
+## 🤖 Contributors
+Tiago Ferreira @ [tiagoit](https://github.com/tiagoit)
+Tiffany Arellano @ [yirano](https://github.com/yirano)
 
-- **Assignment page** - [The Odin Project](https://www.theodinproject.com/courses/html5-and-css3/lessons/using-bootstrap)
-- **Live** - [Github pages](https://ferreirati.github.io/mv-07-htmlcss-newsweek/src)
+## 🙋‍♂ Show your support
+Give a ⭐️ if you like this project!
+
+## 📝 License
+This project is [MIT](https://github.com/tiagoit/mv-htmlcss-07-newsweek/license.txt) licensed.
