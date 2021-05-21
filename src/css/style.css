@@ -144,8 +144,10 @@ header .float-right span {
 }
 
 header .float-right span:last-child {
-  background-color: #fff;
-  color: #e9212e;
+  padding: 4px 10px;
+  background-color: #ffe400;
+  color: black;
+  border-radius: 30px;
 }
 
 header .regular-nav .second-row {
@@ -162,6 +164,11 @@ header .regular-nav .second-row span {
   font-size: 18px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.8);
+}
+
+header .regular-nav .second-row span:hover {
+  color: red;
+  cursor: pointer;
 }
 
 /* Mobile nav */
